@@ -1,19 +1,24 @@
 import random
+  
+generated_number = random.randint(1,100)
+num_of_guesses =  0
+guessed_number = 0
 
-num = random.randint(1,100)
-guess = input("Guess the number... ")
+while int(guessed_number ) != generated_number:
+    guessed_number = input("Guess the  number...")
 
-guesses = 0
-while (guess) != num and (guess) != "exit":
+    if guessed_number == exit :
+        break
 
-    if int(guess) > num:
-        guess = input("You guessed too high.")
-        guesses += 1
- 
-    elif int(guess) < num:
-        guess = input("You guessed too low.")
-        guesses += 1
-if (guess) == "exit":
-        exit (0)    
+    num_of_guesses += 1
 
-print ("Well done! ","You guessed with " + str(guesses) + " guesses")
+    if int(guessed_number ) > generated_number:
+      print("You guessed too high.")
+
+    elif int(guessed_number) < generated_number:
+      print ("You guessed too low.")
+else:
+    print("Well done!")
+    print("You guessed it in " +  str(num_of_guesses) +  " steps")
+
+
